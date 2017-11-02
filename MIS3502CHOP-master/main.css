@@ -1,0 +1,61 @@
+.loginLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+.login{
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    background-color: #005587;
+    border-radius: 20px;
+}
+.title{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+.loginForm{
+    width: 174px;
+    margin: auto;
+    color: white;
+}
+.loginSubmit{
+    float: right;
+}
+.navbar{
+    background-color: #005587;
+}
+.navBarImage{
+    height: 40px;
+    width: auto;
+}
+.navbar-toggler-icon{
+    background-color: white;
+}
+.navbar-nav{
+    color: white;
+}
+.dropdown-menu{
+    background-color: #005587;
+}
+.dropdown-item{
+    color: white;
+}
+.nav-link{
+    color: white;
+}
+.largeScreen{
+    padding: 0;
+}
+.card{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.cardButton{
+    display: block;
+    margin: auto;
+}
+

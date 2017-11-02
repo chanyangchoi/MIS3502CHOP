@@ -1,0 +1,11 @@
+#profile_title{
+    text-align: center;
+    padding-top: 50px;
+}
+.addPatientForm{
+    margin: auto;
+    padding-top: 20px;
+}
+#allergies{
+    width: 176px;
+}
