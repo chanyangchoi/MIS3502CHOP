@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+<head >
+    <title>Add Recipe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -45,7 +46,7 @@ only screen and (max-width: 760px) {
  <div class="row">
         <div class="col-xl-12 largeScreen">
             <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="dashboard.html"><img src="../logo.PNG"class="navBarImage"></a>
+                <a class="navbar-brand" href="dashboard.php"><img src="../logo.PNG"class="navBarImage" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -114,7 +115,7 @@ only screen and (max-width: 760px) {
 
     <tr>
     <thead>
-    <th></th>
+    <th>Recipe</th>
     <th colspan="2">Liquid</th>
     <th colspan="2">Protein</th>
     <th colspan="2">F&V: Vitamin A</th>
@@ -361,31 +362,31 @@ only screen and (max-width: 760px) {
 
 
   <tr>
-    <th>Calories</th>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
-    <td colspan="2"><input type="number" name="calories">/200</td>
+      <th><label for="calories">Calories</label></th>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
+    <td colspan="2"><input type="number" name="calories" id="calories">/200</td>
   </tr>
-  
+
   <tr>
-    <th>Required Servings</th>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
-    <td colspan="2"><input type="number" name="servings"></td>
+    <th><label for="servings">Required Servings</label></th>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
+    <td colspan="2"><input type="number" name="servings" id="servings"></td>
   </tr>
 </table>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <title>Add New Ingredient</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -48,7 +48,7 @@ only screen and (max-width: 760px) {
   <div class="row">
         <div class="col-xl-12 largeScreen">
             <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="dashboard.html"><img src="../logo.PNG"class="navBarImage"></a>
+                <a class="navbar-brand" href="dashboard.php"><img src="../logo.PNG"class="navBarImage" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -114,7 +114,7 @@ only screen and (max-width: 760px) {
         <input type="number" name="calories_per_serving" id="calories_per_serving"> kcal
         <br><br>
         <label for="category" class="ingredientFormLabel">Category:</label>
-        <select name='category_id'>
+        <select name='category_id' id="category">
             <option value=''>Select Category </option>
             <option value = '1'>Liquid</option>
             <option value = '2'>Protein</option>

@@ -3,8 +3,9 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>Add Patient</title>
  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -26,11 +27,11 @@ p     { display: table-row;  }
 label { display: table-cell; }
 input { display: table-cell; }
 </style>
-    <div id="container" style="width: 100%">
+    <div id="" style="width: 100%">
 <div class="row">
         <div class="col-xl-12 largeScreen">
             <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="dashboard.html"><img src="../logo.PNG"class="navBarImage"></a>
+                <a class="navbar-brand" href="dashboard.php"><img src="../logo.PNG"class="navBarImage" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -87,10 +88,10 @@ input { display: table-cell; }
     <h1 id="profile_title">Add Patient Profile</h1>
     <form action="index.php" method="post" class="addPatientForm">
         <fieldset>
-        <label for="name">First Name:</label>
+        <label for="first_name">First Name:</label>
         <input type="text" name="first_name" id="first_name">
         <br>
-        <label for="name">Last Name:</label>
+        <label for="last_name">Last Name:</label>
         <input type="text" name="last_name" id="last_name">
         <br>
         <label for="birth">Birth Date:</label>
@@ -126,7 +127,7 @@ input { display: table-cell; }
     <br/>
     <br>
     <label for="caregiver"> Caregiver:</label>
-    <select name="caregiver_id" class="selectCaregiver">
+    <select name="caregiver_id" class="selectCaregiver" id='caregiver'>
         <option value=''>Select Caregiver </option>
         <?php
         $caregivers= getCaregiver();

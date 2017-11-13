@@ -16,7 +16,7 @@ if (isset($_POST['login']))
         $_SESSION['LOGGED_IN']='OK';
         $_SESSION['TYPE']=$credentials['type'];
         $_SESSION['USERNAME'] = $username;
-        header('Location: ../dashboard.html');
+        header('Location: ../dashboard.php');
         exit();
     } else
     {
@@ -24,7 +24,7 @@ if (isset($_POST['login']))
         include 'people_login.php';
         exit();
     }
-} 
+}
 
 //if all else fails
 include 'people_login.php';
