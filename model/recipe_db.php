@@ -5,9 +5,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-function addRecipe($desired_cal_cat1, $desired_cal_cat2, $desired_cal_cat3, $desired_cal_cat4, $desired_cal_cat5){
+
+function addRecipe($patient_id, $liquid,$protein,$vitamin_A,$vitamin_C,$fv_other, $potassium, $starches, $fat, $supplement_needs, $other_additions){
+    global $db;
+        $sql = "INSERT INTO `recipe`(`patient_id`, `liquid`,`protein`,`vitamin_A`, `vitamin_C`,`fv_other`,`potassium`,`starches`,`fat`,`supplements_needed`,`other_additions`) VALUES "
+            . "(:patient_id, :liquid,:protein, :vitamin_A, :vitamin_C,:fv_other,:potassium,:starches,:fat,:supplement_needs,:other_additions)";
+   
+    $statement = $db->prepare($sql);
+    $statement->bindValue(':patient_id',$patient_id);
+    $statement->bindValue(':liquid',$liquid);
+    $statement->bindValue(':protein',$protein);
+    $statement->bindValue(':vitamin_A',$vitamin_A);
+    $statement->bindValue(':vitamin_C',$vitamin_C);
+    $statement->bindValue(':fv_other',$fv_other);
+    $statement->bindValue(':potassium',$potassium);
+    $statement->bindValue(':starches',$starches);
+    $statement->bindValue(':fat',$fat);
+    $statement->bindValue(':supplement_needs',$supplement_needs);
+    $statement->bindValue('::other_additions',$other_additions);
+    $result = $statement->execute();
+    $statement->closeCursor();
     
+    //result is true on success, false on error
+    return $result;
 }
+
 
 function getCalories(){
         global $db;
@@ -20,100 +42,11 @@ function getCalories(){
     return $result;
 }
 
-function getIngredient_category1(){
-    $query='SELECT * FROM `ingredient` where category_id=1';
+function getIngredient($category_id){
+    global $db;
+    $query='SELECT * FROM `ingredient` where category_id=:category_id';
     $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-function getIngredient_category2(){
-    $query='SELECT * FROM `ingredient` where category_id=2';
-    $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-
-function getIngredient_category3(){
-    $query='SELECT * FROM `ingredient` where category_id=3';
-    $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-function getIngredient_category4(){
-    $query='SELECT * FROM `ingredient` where category_id=4';
-    $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-function getIngredient_category5(){
-    $query='SELECT * FROM `ingredient` where category_id=5';
-    $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-function getIngredient_category6(){
-    $query='SELECT * FROM `ingredient` where category_id=6';
-    $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-function getIngredient_category7(){
-    $query='SELECT * FROM `ingredient` where category_id=7';
-    $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-function getIngredient_category8(){
-    $query='SELECT * FROM `ingredient` where category_id=8';
-    $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-function getIngredient_category9(){
-    $query='SELECT * FROM `ingredient` where category_id=9';
-    $statement=$db->prepare($query);
-    $statement->execute();
-    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
-    
-    return $result;
-}
-
-function getIngredient_category10(){
-    $query='SELECT * FROM `ingredient` where category_id=10';
-    $statement=$db->prepare($query);
+    $statement->bindValue(':category_id',$category_id);
     $statement->execute();
     $result=$statement->fetchAll(PDO::FETCH_ASSOC);
     $statement->closeCursor();

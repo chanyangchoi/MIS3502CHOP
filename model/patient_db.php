@@ -51,11 +51,21 @@ function getDietician() {
 }
 function getPatient(){
     global $db;
-    $query='SELECT patient.first_name, patient.last_name, birth_date, patient.gender, dietician.first_name, dietician.last_name, caregiver.first_name, caregiver.last_name FROM patient, caregiver, dietician';
+    $query='SELECT patient.patient_id, patient.first_name, patient.last_name, birth_date, patient.gender, dietician.first_name, dietician.last_name, caregiver.first_name, caregiver.last_name FROM patient, caregiver, dietician';
     $statement=$db->prepare($query);
     $statement->execute();
     $result=$statement->fetchAll(PDO::FETCH_ASSOC);
-    $result=sort($result);
+    $statement->closeCursor();
+    
+    return $result;
+}
+
+function getPatient1(){
+    global $db;
+    $query='SELECT * from patient';
+    $statement=$db->prepare($query);
+    $statement->execute();
+    $result=$statement->fetchAll(PDO::FETCH_ASSOC);
     $statement->closeCursor();
     
     return $result;
