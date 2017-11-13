@@ -1,17 +1,33 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>BLENDERIZED DIET</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+<?php 
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="main.css"/>
-  </head>
-  <body>
-   <div class="row">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+<style>
+
+form  { display: table;}
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+</style>
+    <div id="container" style="width: 100%">
+<div class="row">
         <div class="col-xl-12 largeScreen">
             <nav class="navbar navbar-expand-lg ">
                 <a class="navbar-brand" href="dashboard.html"><img src="logo.PNG"class="navBarImage"></a>
@@ -49,7 +65,7 @@
                         Ingredient
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="ingredient_add.php">Add Ingredient</a>
+                        <a class="dropdown-item" href="add_ingredient.php">Add Ingredient</a>
                       </div>
                     </li>
                     
@@ -69,51 +85,45 @@
               </nav>
         </div>
     </div>
-      <div class="row">
-          
-      </div>
-    <div class="row">
-        
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-            <div class="card" style="width: 15rem;">
-              <img class="card-img-top" src="smiling-kid.jpg" alt="Card image cap">
-              <div class="card-body">
- <p class="card-text">Name:<br>Age: <br> <a href="current_recipe.php">View Current Recipe</a> </p>
-
-              </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12" >
-            <div class="card" style="width: 15rem;">
-              <img class="card-img-top cardImage" src="smiling-kid.jpg" alt="Card image cap">
-              <div class="card-body">
-                  <p class="card-text">Name:<br>Age: <br> <a href="current_recipe.php">View Current Recipe</a> </p>
-                  
-              </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12" >
-            <div class="card" style="width: 15rem;">
-              <img class="card-img-top cardImage" src="smiling-kid.jpg" alt="Card image cap">
-              <div class="card-body">
-                  <p class="card-text">Name:<br>Age: <br> <a href="current_recipe.php">View Current Recipe</a> </p>
+    <h1 id="profile_title">Add New Patient</h1>
+    <form action="index.php">
+        <fieldset>
+        <label for="name"> Name:</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="birth">Birth Date:</label>
+        <input type="date" name="birth_date" id="birth">
+        <br>
+        <label for="calories">Daily Calorie Intake:</label>
+        <input type="number" id="calories" name="calories" value="2000">
+        <br>
+        <label for="volume">Volume Restrictions:</label>
+        <input type="number" name="calories" value="200">
+    
+        <br>
+    <label for="allergies">Select an Allergy:</label><br>
+  <select multiple name="allergies" id="allergies">
+    <option value="milk">Milk</option>
+    <option value="soy">Soy</option>
+    <option value="nuts">Tree nut/Peanut</option>
+    <option value="eggs">Eggs</option>
+    <option value="gluten">Gluten</option>
+    <option value="other">Other</option>
+  </select>
   
-              </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12" >
-            <div class="card" style="width: 15rem;">
-              <img class="card-img-top cardImage" src="smiling-kid.jpg" alt="Card image cap">
-              <div class="card-body">
-                   <p class="card-text">Name:<br>Age: <br> <a href="current_recipe.php">View Current Recipe</a> </p>
-   
-              </div>
-            </div>
-        </div>
-    </div>
+    <br/>
+    <br/>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
+      <input type="submit" value="Submit">
+        </fieldset>
+
+     </form>
+   
+    <div id='message' class='bg-success'>
+        <?php 
+ echo $message;
+}
+?>
+    </div>
+</body>
 </html>
