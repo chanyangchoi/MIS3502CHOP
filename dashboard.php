@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,12 +10,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css"/>
+
   </head>
   <body>
-   <div class="row">
+
+      <div class="row">
         <div class="col-xl-12 largeScreen">
             <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="dashboard.html"><img src="logo.PNG"class="navBarImage"></a>
+                <a class="navbar-brand" href="dashboard.php"><img src="logo.PNG"class="navBarImage"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,16 +27,15 @@
                   </ul>
                    <ul class="navbar-nav">
                     <li class="nav-item active">
-                      <a class="nav-link" href="dashboard.html">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="dashboard.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Patients
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="dashboard.html">Patient List</a>
-
-                          <a class="dropdown-item" href="add_patient_profile.php">Add Patients</a>
+                          <a class="dropdown-item" href="dashboard.php">Patient List</a>
+                          <a class="dropdown-item" href= "patient/patient_add.php">Add Patients</a>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -41,7 +43,7 @@
                         Recipe
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="add_recipe.php">Add Recipe</a>
+                        <a class="dropdown-item" href="recipe/recipe_add.php">Add Recipe</a>
                       </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -49,31 +51,17 @@
                         Ingredient
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="ingredient_add.php">Add Ingredient</a>
+                        <a class="dropdown-item" href="ingredient/ingredient_add.php">Add Ingredient</a>
                       </div>
                     </li>
-                    
-                    <!--<li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </li> -->
+
                   </ul>
                 </div>
               </nav>
         </div>
     </div>
-      <div class="row">
-          
-      </div>
     <div class="row">
-        
+
         <div class="col-xl-3 col-lg-4 col-md-6 col-12">
             <div class="card" style="width: 15rem;">
               <img class="card-img-top" src="smiling-kid.jpg" alt="Card image cap">
@@ -88,7 +76,7 @@
               <img class="card-img-top cardImage" src="smiling-kid.jpg" alt="Card image cap">
               <div class="card-body">
                   <p class="card-text">Name:<br>Age: <br> <a href="current_recipe.php">View Current Recipe</a> </p>
-                  
+
               </div>
             </div>
         </div>
@@ -97,7 +85,7 @@
               <img class="card-img-top cardImage" src="smiling-kid.jpg" alt="Card image cap">
               <div class="card-body">
                   <p class="card-text">Name:<br>Age: <br> <a href="current_recipe.php">View Current Recipe</a> </p>
-  
+
               </div>
             </div>
         </div>
@@ -106,7 +94,7 @@
               <img class="card-img-top cardImage" src="smiling-kid.jpg" alt="Card image cap">
               <div class="card-body">
                    <p class="card-text">Name:<br>Age: <br> <a href="current_recipe.php">View Current Recipe</a> </p>
-   
+
               </div>
             </div>
         </div>
