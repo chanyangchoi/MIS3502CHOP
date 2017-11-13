@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="table.css">
-<link rel="stylesheet" href="../main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="addIngredient.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
 h1 {
     color: black;
     font-family: Arial,sans-serif;
-    
+
 }
 
 form  { display: table;}
@@ -29,20 +29,20 @@ p     { display: table-row;  }
 label { display: table-row; }
 input { display: table-row; }
 
-@media 
+@media
 only screen and (max-width: 760px) {
 
 	/* Force table to not be like tables anymore */
-	form { 
+	form {
 		display: block;
                 text-align: center;
 	}
 </style>
-  </head>   
-  
+  </head>
+
 <body>
 
-    
+
 <div class="container">
   <div class="row">
         <div class="col-xl-12 largeScreen">
@@ -85,7 +85,7 @@ only screen and (max-width: 760px) {
                         <a class="dropdown-item" href="add_ingredient.php">Add Ingredient</a>
                       </div>
                     </li>
-                    
+
                     <!--<li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
@@ -102,7 +102,7 @@ only screen and (max-width: 760px) {
               </nav>
         </div>
     </div>
- 
+
 <div class="row">
     <h1>Add New Ingredient</h1>
 </div>
@@ -110,7 +110,7 @@ only screen and (max-width: 760px) {
     <form class="ingredientForm" action='index.php' method='post'>
         <label for="ingredient_name" class="ingredientFormLabel">Ingredient Name:</label>
         <input type="text" name="ingredient_name" id="ingredient_name">
-        <br><br>  
+        <br><br>
         <label for="serving_unit" class="ingredientFormLabel">Serving Unit:</label>
         <input type="text" name="serving_unit" id="serving_unit">
         <br><br>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 ?>
 
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="addPatientProfile.css">
 <link rel="stylesheet" href="../main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -17,7 +18,7 @@
 
 </head>
 <body>
-    
+
 <style>
 
 form  { display: table;}
@@ -67,7 +68,7 @@ input { display: table-cell; }
                         <a class="dropdown-item" href="add_ingredient.php">Add Ingredient</a>
                       </div>
                     </li>
-                    
+
                     <!--<li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
@@ -104,11 +105,11 @@ input { display: table-cell; }
             <option value='Other'>Other</option>
         </select>
         <br>
-         
-  <!--       
+
+  <!--
         <label for="restriction">Restriction:</label>
         <select multiple name="restriction" id="restriction">
-            <option value="">Select Restriction</option>            
+            <option value="">Select Restriction</option>
             <option value="1">Milk</option>
             <option value="2">Soy</option>
             <option value="3">Tree nut/Peanut</option>
@@ -128,7 +129,7 @@ input { display: table-cell; }
     <label for="caregiver"> Caregiver:</label>
     <select name="caregiver_id">
         <option value=''>Select Caregiver </option>
-        <?php 
+        <?php
         $caregivers= getCaregiver();
         foreach ($caregivers as $caregiver){
            echo "<option value=".$caregiver['caregiver_id'].">".$caregiver['first_name'].' '.$caregiver['last_name'].'</option>';
@@ -140,7 +141,7 @@ input { display: table-cell; }
     <label for="dietician"> Dietician:</label>
     <select name="dietician_id">
         <option value=''>Select Dietician </option>
-        <?php 
+        <?php
         $dieticians= getDietician();
         foreach ($dieticians as $dietician){
            echo "<option value=".$dietician['dietician_id'].">".$dietician['first_name'].' '.$dietician['last_name'].'</option>';
@@ -152,9 +153,9 @@ input { display: table-cell; }
       <input type="submit" value="Submit" name='submit'>
         </fieldset>
      </form>
-   
+
     <div id='message'>
-        <?php 
+        <?php
         echo $message;
         ?>
     </div>
